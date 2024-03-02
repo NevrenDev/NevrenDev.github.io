@@ -46,8 +46,6 @@ function toggleSidebar() {
     }
 
     moveParticles();
-
-    setInterval(createParticle, 1000);
 });
 
 function changeSection(sectionId) {
