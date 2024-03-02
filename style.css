@@ -22,7 +22,8 @@
   
   .sidebar {
     width: 55px;
-    background-color: #4B0082;
+    background: transparent;
+    border: 1px solid #4B0082;
     padding-top: 20px;
     transition: width 0.5s;
     z-index: 1;
