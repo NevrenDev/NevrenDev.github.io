@@ -7,14 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-  <title>Nevren Dev</title>
+  <title>Your Portfolio</title>
 </head>
-
 <body>
   <div class="wrapper">
     <div class="sidebar">
       <div class="nav">
-        <button onclick="toggleSidebar()"><i class="fas fa-angle-double-right"></i></button>
+        <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right"></i></button>
         <button onclick="changeSection('home')"><i class="fas fa-home"></i> &nbsp;&nbsp;Home</button>
         <button onclick="changeSection('about')">&nbsp;<i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp;About Me</button>
         <button onclick="changeSection('projects')"><i class="fa-solid fa-gamepad"></i> &nbsp;&nbsp;Projects</button>
@@ -42,17 +41,37 @@
           <legend>In Development</legend>
           <li>
             Treasure of Stagvale <br>
-            <progress max="100" value="2">2%</progress>
+            <label for="stagvale">2% complete</label>
+            <progress max="100" value="2" id="stagvale">2%</progress>
+            <br> <label>Any access?: no</label>
           </li>
           <li>
             Stagvale: Defense of the Village <br>
-            <progress max="100" value="24">24%</progress>
+            <label for="stagvaledefense">24% complete</label>
+            <progress max="100" value="24" id="stagvaledefense">24%</progress>
+            <br> <label>Any access?: no</label>
           </li>
+        </fieldset>
+        <hr>
+        <h2>Games Info</h2>
+        <fieldset>
+          <legend>Treasure of Stagvale</legend>
+          <p>No info</p>
+        </fieldset>
+        <fieldset>
+          <legend>Stagvale: Defense of the Village</legend>
+          <p>Stagvale: Defense of the Village is rouge-like game with tower defense mechanics focused around 
+            a village called Stagvale which is under attack from monsters. You'll have to build defense system in order
+            to block monsters from raiding the village and destroying it. <br> The game have 2D pixel graphics.
+            <br> Game is currently in pre-alpha state
+          </p>
         </fieldset>
       </section>
       <section id="contact" class="section">
         <h2>Discord Server</h2>
-        <p>Be in touch with the news from my development <a href="http://discord.gg/v2B3FbhKPx">[here]</a> or contact me via discord </p><p id="dnick">DM contact: ._nevren_.</p>
+        <p>Be in touch with the news from my development <a href="http://discord.gg/v2B3FbhKPx">[here]</a>
+          or contact me via discord </p><p id="dnick">DM contact: ._nevren_.
+        </p>
       </section>
     </div>
     <div class="particles"></div>
