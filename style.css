@@ -172,7 +172,7 @@ hr {
   margin-bottom: 10px;
 }
 
-#smlinks, #gamesinfo {
+#smlinks, #gamesinfo, #wupdates {
   overflow-y: auto;
   scrollbar-width: 12px;
   scrollbar-color: #9e2bf0 #7a16c2;
@@ -180,6 +180,6 @@ hr {
   grid-template-columns: auto auto;
 }
 
-#smlinks fieldset, #gamesinfo fieldset {
+#smlinks fieldset, #gamesinfo fieldset, #wupdates fieldset {
   margin: 5px;
 }
