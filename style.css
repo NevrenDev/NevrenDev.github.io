@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  html {
+    user-select: none;
+  }
   
   body {
     font-family: 'Arial', sans-serif;
@@ -77,16 +81,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 100%;
     height: fit-content;
-    padding: 20px;
+    padding: 50px;
   }
   
   .section.active {
     opacity: 1;
   }
 
-.particles {
+  .particles {
     position: absolute;
     top: 0;
     left: 0;
@@ -142,10 +146,6 @@ a:hover {
   color: #7a16c2;
 }
 
-#dnick {
-  font-size: 18px;
-}
-
 legend {
   padding: 5px;
 }
@@ -155,7 +155,7 @@ fieldset {
   width: fit-content;
 }
 
-#released li, #in-dev li {
+#released li, #in-dev li, #skills li, #serverOffer li {
   margin-left: 20px;
 }
 
@@ -170,4 +170,16 @@ progress[value] {
 hr {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#smlinks, #gamesinfo {
+  overflow-y: auto;
+  scrollbar-width: 12px;
+  scrollbar-color: #9e2bf0 #7a16c2;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#smlinks fieldset, #gamesinfo fieldset {
+  margin: 5px;
 }
