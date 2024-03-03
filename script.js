@@ -48,15 +48,16 @@ function toggleSidebar() {
     moveParticles();
 });
 
-function changeSection(sectionId) {
-    var sections = document.querySelectorAll('.section');
+window.location = "#home";
 
-    sections.forEach(function(section) {
-        section.classList.remove('active');
-    });
+function changeSection(section) {
+    window.location = "#"+section;
+}
 
-    var selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.classList.add('active');
-    }
+function gamePage(page) {
+    window.location = "gamePages/"+page+".html";
+}
+
+function goBack() {
+    window.location = "../index.html";
 }
