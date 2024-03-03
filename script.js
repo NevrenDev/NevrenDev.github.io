@@ -48,8 +48,6 @@ function toggleSidebar() {
     moveParticles();
 });
 
-window.location = "#home";
-
 function changeSection(section) {
     window.location = "#"+section;
 }
