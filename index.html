@@ -17,7 +17,7 @@
         <button onclick="changeSection('home')"><i class="fas fa-home"></i> &nbsp;&nbsp;Home</button>
         <button onclick="changeSection('about')">&nbsp;<i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp;About Me</button>
         <button onclick="changeSection('projects')"><i class="fa-solid fa-gamepad"></i> &nbsp;&nbsp;Projects</button>
-        <button onclick="changeSection('contact')"><i class="fa-brands fa-discord"></i> &nbsp;&nbsp;Discord Server</button>
+        <button onclick="changeSection('links')"><i class="fa-solid fa-link"></i> &nbsp;&nbsp;Links</button>
       </div>
     </div>
     <div class="content">
@@ -30,15 +30,51 @@
         <p>I'm Nevren, a standalone game dev. I'm from Poland and I like coding tho I use no-code engine for games cuz
           I don't have equipement and skills to code in engines like Unity or Unreal Engine.
         </p>
+        <hr>
+        <fieldset id="skills">
+          <legend>My Skills</legend>
+          <li>
+            <label for="html">HTML</label>
+            <progress id="html" max="100" value="68">68%</progress>
+          </li>
+          <li>
+            <label for="css">CSS</label>
+            <progress id="css" max="100" value="50">50%</progress>
+          </li>
+          <li>
+            <label for="js">JavaScript</label>
+            <progress id="js" max="100" value="35">35%</progress>
+          </li>
+          <li>
+            <label for="java">Java</label>
+            <progress id="java" max="100" value="1">1%</progress>
+          </li>
+          <li>
+            <label for="cpp">C++</label>
+            <progress id="cpp" max="100" value="23">23%</progress>
+          </li>
+          <li>
+            <label for="csh">C#</label>
+            <progress id="csh" max="100" value="0">0%</progress>
+          </li>
+          <li>
+            <label for="c">C</label>
+            <progress id="c" max="100" value="0">0%</progress>
+          </li>
+          <li>
+            <label for="py">Python</label>
+            <progress id="py" max="100" value="50">50%</progress>
+          </li>
+        </fieldset>
       </section>
       <section id="projects" class="section">
         <h2>Games in development</h2>
         <fieldset id="released">
-          <legend>Released Games</legend>
+          <legend><i class="fa-solid fa-cloud"></i> Released Games</legend>
           <li>None</li>
         </fieldset>
         <fieldset id="in-dev">
-          <legend>In Development</legend>
+          <legend><i class="fa-solid fa-code"></i> In Development</legend>
           <li>
             Treasure of Stagvale <br>
             <label for="stagvale">2% complete</label>
@@ -54,24 +90,62 @@
         </fieldset>
         <hr>
         <h2>Games Info</h2>
-        <fieldset>
-          <legend>Treasure of Stagvale</legend>
-          <p>No info</p>
-        </fieldset>
-        <fieldset>
-          <legend>Stagvale: Defense of the Village</legend>
-          <p>Stagvale: Defense of the Village is rouge-like game with tower defense mechanics focused around 
-            a village called Stagvale which is under attack from monsters. You'll have to build defense system in order
-            to block monsters from raiding the village and destroying it. <br> The game have 2D pixel graphics.
-            <br> Game is currently in pre-alpha state
-          </p>
-        </fieldset>
+        <section id="gamesinfo">
+          <fieldset>
+            <legend>Treasure of Stagvale</legend>
+            <p>No info</p>
+          </fieldset>
+          <fieldset>
+            <legend>Stagvale: Defense of the Village</legend>
+            <p>Stagvale: Defense of the Village is rouge-like game with tower defense mechanics focused around 
+              a village called Stagvale which is under attack from monsters. You'll have to build defense system in order
+              to block monsters from raiding the village and destroying it. <br> The game have 2D pixel graphics.
+              <br> Game is currently in pre-alpha state
+            </p>
+          </fieldset>
+        </section>
       </section>
-      <section id="contact" class="section">
-        <h2>Discord Server</h2>
-        <p>Be in touch with the news from my development <a href="http://discord.gg/v2B3FbhKPx">[here]</a>
-          or contact me via discord </p><p id="dnick">DM contact: ._nevren_.
-        </p>
+      <section id="links" class="section">
+        <h2>Links</h2>
+        <p>Here are some links to my social media and other</p>
+        <hr>
+        <section id="smlinks">
+          <fieldset>
+            <legend><a href="http://discord.gg/v2B3FbhKPx" target="_blank"><i class="fa-brands fa-discord"></i> Discord Server</a></legend>
+            <p>Be in touch with the news from my development</p>
+            <fieldset id="serverOffer">
+              <legend>What the server offers</legend>
+              <li>News about game development</li>
+              <li>sneakpeeks</li>
+              <li>active owner</li>
+              <li>More Soon</li>
+            </fieldset>
+          </fieldset>
+          <fieldset>
+            <legend><i class="fa-solid fa-message"></i> Discord DM Contact</legend>
+            <p>Nick: ._nevren_. <br>(You need to join the server in order to write to me in DMs)</p>
+          </fieldset>
+          <fieldset>
+            <legend><a href="https://patreon.com/user?u=118340422" target="_blank"><i class="fa-brands fa-patreon"></i> Patreon</a></legend>
+          <p>You can follow my patreon for some exclusive news or just support me</p>
+          </fieldset>
+          <fieldset>
+            <legend><a href="https://github.com/NevrenDev" target="_blank" ><i class="fa-brands fa-github"></i> Github</a></legend>
+            <p>There's nothing much there, and it's just host for this website</p>
+          </fieldset>
+          <fieldset>
+            <legend><a href="https://youtube.com/@NevrenDev" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></legend>
+            <p>I upload videos there with some info about </p>
+          </fieldset>
+          <fieldset>
+            <legend><a href="https://tiktok.com/@nevren.dev" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></legend>
+            <p>Same as Youtube but more frequently some questions and qna <br>(TikTok account isn't made yet)</p>
+          </fieldset>
+          <fieldset>
+            <legend><a href="https://www.twitch.tv/nevrendev" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitch"></i> Twitch</a></legend>
+            <p>There will be streams with coding, but after I get better internet and PC</p>
+          </fieldset>
+        </section>
       </section>
     </div>
     <div class="particles"></div>
