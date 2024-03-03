@@ -155,7 +155,7 @@ fieldset {
   width: fit-content;
 }
 
-#released li, #in-dev li, #skills li, #serverOffer li {
+#released li, #in-dev li, #skills li, #serverOffer li, #update li {
   margin-left: 20px;
 }
 
