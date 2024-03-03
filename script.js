@@ -53,7 +53,7 @@ function changeSection(section) {
 }
 
 function gamePage(page) {
-    window.location = "gamePages/"+page+".html";
+    window.location = page+"/";
 }
 
 function goBack() {
