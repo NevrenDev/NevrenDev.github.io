@@ -22,13 +22,15 @@
       </div>
     </div>
     <div class="content">
-      <section id="home" class="section active">
+      <section id="home" class="section">
         <h2><i class="fas fa-home"></i> Welcome to Official Nevren Dev website</h2>
+        <hr>
         <p>Feel free to explore the website <br>(I know that the website is kinda empty but I have
         no idea what to put here)</p>
       </section>
       <section id="about" class="section">
         <h2><i class="fas fa-user"></i> About Me</h2>
+        <hr>
         <p>I'm Nevren, a standalone game dev. I'm from Poland and I like coding tho I use no-code engine for games cuz
           I don't have equipement and skills to code in engines like Unity or Unreal Engine.
         </p>
@@ -71,50 +73,48 @@
       </section>
       <section id="projects" class="section">
         <h2><i class="fa-solid fa-gamepad"></i> Projects (games)</h2>
-        <fieldset id="released">
-          <legend><i class="fa-solid fa-cloud"></i> Released Games</legend>
-          <li>None</li>
-        </fieldset>
-        <fieldset id="in-dev">
-          <legend><i class="fa-solid fa-code"></i> In Development</legend>
-          <li>
-            Treasure of Stagvale <br>
-            <label for="stagvale">2% complete</label>
-            <progress max="100" value="2" id="stagvale">2%</progress>
-            <br> <label>Any access?: no</label>
-          </li>
-          <li>
-            Stagvale: Defense of the Village <br>
-            <label for="stagvaledefense">24% complete</label>
-            <progress max="100" value="24" id="stagvaledefense">24%</progress>
-            <br> <label>Any access?: no</label>
-          </li>
-        </fieldset>
         <hr>
-        <h2>Games Info</h2>
         <section id="gamesinfo">
           <fieldset>
             <legend>Treasure of Stagvale</legend>
-            <p>No info</p>
+            <button onclick="gamePage('ToS')">Game's Page</button>
           </fieldset>
           <fieldset>
             <legend>Stagvale: Defense of the Village</legend>
-            <p>Stagvale: Defense of the Village is rouge-like game with tower defense mechanics focused around 
-              a village called Stagvale which is under attack from monsters. You'll have to build defense system in order
-              to block monsters from raiding the village and destroying it. <br> The game have 2D pixel graphics.
-              <br> Game is currently in pre-alpha state
-            </p>
+            <button onclick="gamePage('SDotV')">Game's Page</button>
+          </fieldset>
+        </section>
+      </section>
+      <section id="updates" class="section">
+        <h2><i class="fa-solid fa-arrow-rotate-left"></i> Updates</h2>
+        <hr>
+        <p>Here will website updates. To see games updates visit their dedicated page in projects section</p>
+        <section id="wupdates">
+          <fieldset>
+            <legend>Update 2</legend>
+            <p>4.03.2024 (4th Match 2024)</p>
+            <li>Revamped links (Now there are visible links and not hide'n'seek)</li>
+            <li>Revamped sections (You can now scroll!)</li>
+            <li>Projects section remade (now you have to open game's page to see info about it)</li>
+          </fieldset>
+          <fieldset>
+            <legend>Update 1 (recorded)</legend>
+            <p>3.03.2024 (3rd March 2024)</p>
+            <li>Added this tab</li>
+            <li>Now icons in headers!</li>
           </fieldset>
         </section>
       </section>
       <section id="links" class="section">
         <h2><i class="fa-solid fa-link"></i> Links</h2>
+        <hr>
         <p>Here are some links to my social media and other</p>
         <hr>
         <section id="smlinks">
           <fieldset>
-            <legend><a href="http://discord.gg/v2B3FbhKPx" target="_blank"><i class="fa-brands fa-discord"></i> Discord Server</a></legend>
+            <legend><i class="fa-brands fa-discord"></i> Discord Server</legend>
             <p>Be in touch with the news from my development</p>
+            <a href="https://discord.gg/v2B3FbhKPx" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Join</a>
             <fieldset id="serverOffer">
               <legend>What the server offers</legend>
               <li>News about game development</li>
@@ -128,36 +128,29 @@
             <p>Nick: ._nevren_. <br>(You need to join the server in order to write to me in DMs)</p>
           </fieldset>
           <fieldset>
-            <legend><a href="https://patreon.com/user?u=118340422" target="_blank"><i class="fa-brands fa-patreon"></i> Patreon</a></legend>
-          <p>You can follow my patreon for some exclusive news or just support me</p>
+            <legend><i class="fa-brands fa-patreon"></i> Patreon</legend>
+            <p>You can follow my patreon for some exclusive news or just support me</p>
+            <a href="https://patreon.com/user?u=118340422" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
           </fieldset>
           <fieldset>
-            <legend><a href="https://github.com/NevrenDev" target="_blank" ><i class="fa-brands fa-github"></i> Github</a></legend>
+            <legend><i class="fa-brands fa-github"></i> Github</legend>
             <p>There's nothing much there, and it's just host for this website</p>
+            <a href="https://github.com/NevrenDev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
           </fieldset>
           <fieldset>
-            <legend><a href="https://youtube.com/@NevrenDev" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></legend>
+            <legend><i class="fa-brands fa-youtube"></i> YouTube</legend>
             <p>I upload videos there with some info about </p>
+            <a href="https://youtube.com/@NevrenDev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
           </fieldset>
           <fieldset>
-            <legend><a href="https://tiktok.com/@nevren.dev" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></legend>
+            <legend><i class="fa-brands fa-tiktok"></i> TikTok</legend>
             <p>Same as Youtube but more frequently some questions and qna</p>
+            <a href="https://tiktok.com/@nevren.dev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
           </fieldset>
           <fieldset>
-            <legend><a href="https://www.twitch.tv/nevrendev" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitch"></i> Twitch</a></legend>
+            <legend><i class="fa-brands fa-twitch"></i> Twitch</legend>
             <p>There will be streams with coding, but after I get better internet and PC</p>
-          </fieldset>
-        </section>
-      </section>
-      <section id="updates" class="section">
-        <h2><i class="fa-solid fa-arrow-rotate-left"></i> Updates</h2>
-        <p>Here will be mainly website updates but other updates will be too</p>
-        <section id="wupdates">
-          <fieldset>
-            <legend>Update 1 (recorded)</legend>
-            <p>3.03.2024 (3rd March 2024)</p>
-            <li>Added this tab</li>
-            <li>Now icons in headers!</li>
+            <a href="https://www.twitch.tv/nevrendev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
           </fieldset>
         </section>
       </section>
