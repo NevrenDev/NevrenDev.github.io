@@ -3,22 +3,21 @@
     padding: 0;
     box-sizing: border-box;
   }
-
-  html {
-    user-select: none;
-  }
   
   body {
     font-family: 'Arial', sans-serif;
     background: url(bg.jpg);
     background-size:cover;
     height: 100vh;
-    overflow: auto;
+    overflow: none;
+    user-select: none;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
   }
   
   .wrapper {
     display: flex;
-    height: 100%; 
+    height: 100%;
   }
 
   .sidebar.collapsed {
@@ -73,23 +72,18 @@
     position: relative;
     color: white;
     height: 100%; 
+    overflow-y: auto;
+    scroll-behavior: smooth;
   }
   
   .section {
-    opacity: 0;
-    transition: opacity 0.5s;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     padding: 50px;
   }
   
-  .section.active {
-    opacity: 1;
-  }
-
   .particles {
     position: absolute;
     top: 0;
@@ -155,7 +149,7 @@ fieldset {
   width: fit-content;
 }
 
-#released li, #in-dev li, #skills li, #serverOffer li, #updates li {
+#skills li, #serverOffer li, #updates li {
   margin-left: 20px;
 }
 
@@ -172,14 +166,37 @@ hr {
   margin-bottom: 10px;
 }
 
-#smlinks, #gamesinfo, #wupdates {
+#smlinks, #wupdates {
   overflow-y: auto;
-  scrollbar-width: 12px;
-  scrollbar-color: #9e2bf0 #7a16c2;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#gamesinfo {
+  overflow-y: auto;
   display: grid;
   grid-template-columns: auto auto;
 }
 
 #smlinks fieldset, #gamesinfo fieldset, #wupdates fieldset {
   margin: 5px;
+}
+
+#gamesinfo button {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background-color: rgba(128, 0, 128, 0.4);
+  color: white;
+  transition: background-color .5s;
+}
+
+#gamesinfo button:hover {
+  background-color: rgba(128, 0, 128, 0.8);
+}
+
+#gamesinfo fieldset {
+  width: 98%;
 }
