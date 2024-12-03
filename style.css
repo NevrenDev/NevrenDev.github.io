@@ -1,10 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  body {
+body {
     font-family: 'Arial', sans-serif;
     background: url(bg.jpg);
     background-size:cover;
@@ -13,18 +17,18 @@
     user-select: none;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
-  }
+}
   
-  .wrapper {
+.wrapper {
     display: flex;
     height: 100%;
-  }
+}
 
-  .sidebar.collapsed {
+.sidebar.collapsed {
     width: 200px;
-  }
+}
   
-  .sidebar {
+.sidebar {
     width: 55px;
     background: linear-gradient(to right, rgba(128, 0, 128, 0.4), transparent);
     backdrop-filter: blur(5px);
@@ -33,15 +37,15 @@
     z-index: 1;
     height: 100%; 
     overflow: hidden;
-  }
+}
   
-  .nav {
+.nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
   
-  .nav button {
+.nav button {
     display: flex;
     width: 100%;
     padding: 10px;
@@ -55,18 +59,18 @@
     cursor: pointer;
     white-space: nowrap;
     margin: 5px 0;
-  }
+}
   
-  .nav button i {
+.nav button i {
     margin-right: 8px;
     font-size: 1.5em; 
-  }
+}
   
-  .nav button:hover {
+.nav button:hover {
     background-color: rgba(128, 0, 128, 0.5);
-  }
+}
   
-  .content {
+.content {
     flex: 1;
     padding: 20px;
     position: relative;
@@ -74,17 +78,17 @@
     height: 100%; 
     overflow-y: auto;
     scroll-behavior: smooth;
-  }
+}
   
-  .section {
+.section {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 50px;
-  }
+}
   
-  .particles {
+.particles {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,18 +97,18 @@
     z-index: -1;
     background-color: transparent; 
     overflow: hidden;
-  }
+}
   
-  .particle {
+.particle {
     position: absolute;
     width: 3px;
     height: 3px;
     background-color: white;
     border-radius: 50%;
     pointer-events: none;
-  }
+}
   
-  .particle::before {
+.particle::before {
     content: ''; 
     position: absolute;
     width: 6px;
@@ -112,9 +116,9 @@
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: tail 1s linear infinite;
-  }
+}
   
-  @keyframes tail {
+@keyframes tail {
     0% {
       transform: scale(1);
       opacity: 0.5;
@@ -123,7 +127,7 @@
       transform: scale(0);
       opacity: 0;
     }
-  } 
+} 
 
 a:link {
   text-decoration: none;
@@ -149,7 +153,7 @@ fieldset {
   width: fit-content;
 }
 
-#skills li, #serverOffer li, #updates li {
+#skills li, #serverOffer li, #updates li, #gamesinfo li {
   margin-left: 20px;
 }
 

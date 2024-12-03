@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>FnfModLoader 2.0</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="nav">
+                <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right"></i></button>
+                <button onclick="changeSection('home')"><i class="fas fa-home"></i> &nbsp;&nbsp;Home</button>
+                <button onclick="changeSection('progress')"><i class="fa-solid fa-spinner"></i> &nbsp;&nbsp;Progress</button>
+                <button onclick="goBack()"><i class="fa-solid fa-rotate-left"></i> &nbsp;&nbsp;Return</button>
+            </div>
+        </div>
+        <div class="content">
+            <section id="home" class="section">
+                <h2><i class="fas fa-home"></i> FnfModLoader 2.0</h2>
+                <hr>
+                <p>FnfModLoader 2.0 is more advanced version of the original <a href="../fml/"><i class="fa-solid fa-link"></i> FnfModLoader</a>. <br>
+                    It has refreshed UI and more features which you can find in progress section or on project's repo <br>
+                    You can visit the repo here: <a href="https://github.com/NevrenDev/FnFModLoader2.0" target="_blank"><i class="fa-solid fa-link"></i> Github Repo</a>
+                </p>
+            </section>
+            <section id="progress" class="section">
+                <h2><i class="fa-solid fa-spinner"></i> Development Progress</h2>
+                <hr>
+                <fieldset id="updates">
+                    <legend>Progress</legend>
+                    <li>Uncomplete <br> <progress max="5" value="3"></progress> 60%</li>
+                    <li>Mod detection <br> <progress max="1" value="1"></progress> 100%</li>
+                    <li>Mod list <br> <progress max="10" value="9"></progress> 90%</li>
+                    <li>Settings <br> <progress max="10" value="5"></progress> 50%</li>
+                    <li>Themes <br> <progress max="2" value="1"></progress> 50%</li>
+                    <li>Mod Browser <br> <progress max="10" value="1"></progress> 10%</li>
+                    <li>New mods handler <br> <progress max="10" value="4"></progress> 40%</li>
+                </fieldset>
+                <hr>
+                <fieldset id="gamesinfo">
+                    <legend>Updates</legend>
+                    <fieldset>
+                        <legend>Ver 2.0.1-beta</legend>
+                        <li>Added favourite mod system. Favourited mod will appear on top of the list</li>
+                        <li>Added version control for mod data, settings and language files <br>
+                        (But deleting existing lines will still brake the program)</li>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ver 2.0-beta</legend>
+                        <li>Official beta release. Most of functons are available but more will come</li>
+                    </fieldset>
+                </fieldset>
+            </section>
+        </div>
+        <div class="particles"></div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
