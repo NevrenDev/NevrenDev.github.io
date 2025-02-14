@@ -74,7 +74,7 @@ body {
     flex: 1;
     padding: 20px;
     position: relative;
-    color: rgb(212, 212, 212);
+    color: #00FFFF;
     height: 100%; 
     overflow-y: auto;
     scroll-behavior: smooth;
