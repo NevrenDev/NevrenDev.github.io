@@ -22,7 +22,7 @@ body {
 .wrapper {
     display: flex;
     height: 100%;
-}
+} 
 
 .sidebar.collapsed {
     width: 200px;
