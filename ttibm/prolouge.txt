@@ -1,4 +1,4 @@
-<h1>Prolouge</h1>
+<h1 align="center">Prolouge</h1>
 <br><br>
 <i>Magic is fake... at least I thought so...</i>
 <hr>

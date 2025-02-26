@@ -3,8 +3,7 @@ function selectChapter(chapter) {
         .then((res) => res.text())
         .then((text) => {
             const field = document.getElementById('read');
-            if (chapter != prolouge) text = "";
-            if (!text) {
+            if (chapter != "prolouge") {
                 field.innerHTML = "<h3>Sorry. That chapter isn't available here right now</h3>";
                 return;
             }
