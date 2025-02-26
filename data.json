@@ -1,0 +1,63 @@
+{
+    "skills":{
+        "html": "68",
+        "css": "50",
+        "js": "35",
+        "java": "1",
+        "c++": "23",
+        "c#": "0",
+        "c": "0",
+        "py": "50"
+    },
+    "updates": {
+        "U1": {
+            "name": "Update 1 (recorded)",
+            "date": "3.03.2024 (3rd March 2024)",
+            "adds": ["Added this tab", 
+                    "Now icons in headers!"]
+        },
+        "U2": {
+            "name": "Update 2",
+            "date": "4.03.2024 (4th March 2024)",
+            "adds": ["Revamped links (Now there are visible links and not hide'n'seek)", 
+                    "Revamped sections (You can now scroll!)",
+                    "Projects section remade (now you have to open game's page to see info about it)"]
+        },
+        "U3": {
+            "name": "Update 3",
+            "date": "3.12.2024 (3rd December 2024)",
+            "adds": ["Removed old cancelled projects", 
+                    "Renamed projects page from \"Projects (Games)\" to \"Projects\"",
+                    "Fixed a typo in Update 2 changelog (Match instead of March)"]
+        },
+        "U4": {
+            "name": "Update 4",
+            "date": "26.02.2025 (26th February 2025)",
+            "adds": ["Fixed display on small screens",
+                    "Added database in form of json files (makes the HTML shorter)",
+                    "Icons next to project names",
+                    "New project (web novel)",
+                    "Brand new functions: novel reader and theme changer (only available on web novel's project page)"]
+        }
+    },
+    "projects": {
+        "fml": {
+            "id": "fml",
+            "name": "Fnf Mod Loader",
+            "type": "binary",
+            "desc": "A small program designed to make FNF mod managment easier"
+        },
+        "fml2": {
+            "id": "fml2",
+            "name":"Fnf Mod Loader 2.0",
+            "type": "binary",
+            "desc": "More advanced program to make FNF mods managment easier"
+        },
+        "ttibm": {
+            "id": "ttibm",
+            "name": "That time I broke magic",
+            "type": "webnovel",
+            "desc": "My own and first web novel"
+        }
+    }
+}
