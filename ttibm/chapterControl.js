@@ -12,7 +12,7 @@ function selectChapter(chapter) {
         })
         .catch((e) => {
             document.getElementById('read').innerHTML = "<h3>Sorry. That chapter isn't available here right now</h3>";
-        })
+        }) 
 }
 
 function changeTheme() {
