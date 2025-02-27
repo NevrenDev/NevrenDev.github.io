@@ -172,11 +172,9 @@ hr {
 #smlinks, #wupdates {
   overflow-y: auto;
   display: grid;
-  grid-template-columns: auto auto;
 }
 
 #gamesinfo {
-  overflow-y: auto;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -257,6 +255,10 @@ hr {
 @media only screen and (max-width: 600px) {
   .section {
     padding: 10px;
+    height: 170vh;
+  }
+  #gamesinfo {
+    display: block;
   }
   #list {
     height: 20%;
@@ -270,6 +272,7 @@ hr {
 
 @media only screen and (min-width: 720px) {
   .section {padding: 50px;}
+  #smlinks, #wupdates {grid-template-columns: auto auto;}
   #list {
     position: relative;
     float: left;
