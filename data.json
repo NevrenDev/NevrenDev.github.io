@@ -10,6 +10,12 @@
         "py": "50"
     },
     "updates": {
+        "U5": {
+            "name": "Update 5",
+            "date": "2.03.2025 (3rd March 2025)",
+            "adds": ["LOGO!!! (Yes I made a logo finally",
+                    "Some mobile display fixes (hopefully now it should not clip sections)"]
+        },
         "U4": {
             "name": "Update 4",
             "date": "26.02.2025 (26th February 2025)",

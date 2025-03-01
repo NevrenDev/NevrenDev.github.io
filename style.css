@@ -8,7 +8,7 @@ html {
     box-sizing: border-box;
 }
 
-img {
+#logo {
   position: absolute;
   right: 1vh;
   bottom: 1vh;
@@ -261,7 +261,8 @@ hr {
 @media only screen and (max-width: 600px) {
   .section {
     padding: 10px;
-    height: 170vh;
+    height: fit-content;
+    min-height: 100vh;
   }
   #gamesinfo {
     display: block;
