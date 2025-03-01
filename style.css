@@ -7,6 +7,12 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+  position: absolute;
+  right: 1vh;
+  bottom: 1vh;
+}
   
 body {
     font-family: 'Arial', sans-serif;
