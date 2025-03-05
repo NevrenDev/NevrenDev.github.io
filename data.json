@@ -1,15 +1,21 @@
 {
     "skills":{
-        "html": "68",
+        "html": "70",
         "css": "50",
-        "js": "35",
+        "js": "40",
         "java": "1",
-        "c++": "23",
-        "c#": "0",
+        "c++": "35",
+        "c#": "20",
         "c": "0",
-        "py": "50"
+        "py": "60"
     },
     "updates": {
+        "U6": {
+            "name": "Update 6",
+            "date": "5.03.2025 (5th March 2025)",
+            "adds": ["More tweaks",
+                    "Terminal-like section indicator cuz it looks cool"]
+        },
         "U5": {
             "name": "Update 5",
             "date": "2.03.2025 (3rd March 2025)",

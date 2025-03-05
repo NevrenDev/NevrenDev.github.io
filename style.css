@@ -8,10 +8,40 @@ html {
     box-sizing: border-box;
 }
 
-#logo {
+.logo {
   position: absolute;
   right: 1vh;
   bottom: 1vh;
+  color: white;
+  height: 128px;
+}
+
+.logo img {
+  position: relative;
+  float: right;
+}
+
+.logo h2 {
+  position: relative;
+  float: left;
+  top: 45px;
+  font-size: xx-large;
+}
+
+#cursor {
+  animation: blink 800ms linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: transparent;
+  }
 }
   
 body {

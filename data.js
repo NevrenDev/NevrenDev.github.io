@@ -31,7 +31,7 @@ function updateSkills(skills) {
     
     for (const [skill, value] of Object.entries(skills)) {
         const li = document.createElement('li');
-        li.innerHTML = '<label for="'+skill+'">'+skill+'</label>\n<progress id="'+skill+'" max="100" value="'+value+'">'+value+'%</progress>';
+        li.innerHTML = '<label for="'+skill+'">'+skill+'</label>\n<progress id="'+skill+'" max="100" value="'+value+'"></progress> '+value+"%";
         skillsContainer.appendChild(li);
     }
 }
