@@ -1,6 +1,18 @@
+let iE = false;
+
 function toggleSidebar() {
     var sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('collapsed');
+
+    const i = document.getElementById('expand');
+    if (iE) {
+        i.classList.add("def");
+        i.classList.remove("rotate");
+    } else {
+        i.classList.remove("def");
+        i.classList.add("rotate");
+    }
+    iE = !iE;
   }
   
   document.addEventListener("DOMContentLoaded", function () {    

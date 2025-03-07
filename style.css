@@ -74,6 +74,14 @@ body {
     height: 100%; 
     overflow: hidden;
 }
+
+.def {
+  transform: rotate(0deg);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
   
 .nav {
     display: flex;
@@ -88,7 +96,7 @@ body {
     background-color: transparent;
     border: none;
     color: white;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     font-size: 1.1rem;
     transition: background-color .3s;
@@ -100,10 +108,20 @@ body {
 .nav button i {
     margin-right: 8px;
     font-size: 1.5em; 
+    transition: transform 1s, font-size 0.5s;
+}
+
+.sButton:hover i {
+  transform: rotate(-20deg);
+  font-size: 1.6em;
 }
   
 .nav button:hover {
     background-color: rgba(128, 0, 128, 0.5);
+}
+
+.nav button p {
+  margin-left: 15px;
 }
   
 .content {

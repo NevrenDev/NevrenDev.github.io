@@ -12,10 +12,10 @@
     <div class="wrapper">
         <div class="sidebar">
             <div class="nav">
-                <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right"></i></button>
-                <button onclick="changeSection('home')"><i class="fas fa-home"></i> &nbsp;&nbsp;Home</button>
-                <button onclick="changeSection('progress')"><i class="fa-solid fa-spinner"></i> &nbsp;&nbsp;&nbsp;Progress</button>
-                <button onclick="goBack()"><i class="fa-solid fa-rotate-left"></i> &nbsp;&nbsp;&nbsp;Return</button>
+                <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right" id="expand"></i></button>
+                <button onclick="changeSection('home')" class="sButton"><i class="fas fa-home"></i> <p>Home</p></button>
+                <button onclick="changeSection('progress')" class="sButton"><i class="fa-solid fa-spinner"></i> <p>Progress</p></button>
+                <button onclick="goBack()" class="sButton"><i class="fa-solid fa-rotate-left"></i> <p>Return</p></button>
             </div>
         </div>
         <div class="content">

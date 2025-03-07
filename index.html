@@ -16,12 +16,12 @@
   <div class="wrapper">
     <div class="sidebar">
       <div class="nav">
-        <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right"></i></button>
-        <button onclick="changeSection('home')"><i class="fas fa-home"></i> &nbsp;&nbsp;Home</button>
-        <button onclick="changeSection('about')">&nbsp;<i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp;About Me</button>
-        <button onclick="changeSection('projects')"><i class="fa-solid fa-diagram-project"></i> &nbsp;&nbsp;Projects</button>
-        <button onclick="changeSection('updates')"><i class="fa-solid fa-arrow-rotate-left"></i> &nbsp;&nbsp;&nbsp;Updates</button>
-        <button onclick="changeSection('links')"><i class="fa-solid fa-link"></i> &nbsp;&nbsp;Links</button>
+        <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right" id="expand"></i></button>
+        <button onclick="changeSection('home')" class="sButton"><i class="fas fa-home"></i> <p>Home</p></button>
+        <button onclick="changeSection('about')" class="sButton"><i class="fas fa-user"></i> <p>About Me</p></button>
+        <button onclick="changeSection('projects')" class="sButton"><i class="fa-solid fa-diagram-project"></i> <p>Projects</p></button>
+        <button onclick="changeSection('updates')" class="sButton"><i class="fa-solid fa-arrow-rotate-left"></i> <p>Updates</p></button>
+        <button onclick="changeSection('links')" class="sButton"><i class="fa-solid fa-link"></i> <p>Links</p></button>
       </div>
     </div>
     <div class="content">

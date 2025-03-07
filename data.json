@@ -10,6 +10,11 @@
         "py": "60"
     },
     "updates": {
+        "T61": {
+            "name": "Tweak 6.1",
+            "date": "7.03.2025 (7th March 2025)",
+            "adds": ["Animation on sidebar"]
+        },
         "U6": {
             "name": "Update 6",
             "date": "5.03.2025 (5th March 2025)",
