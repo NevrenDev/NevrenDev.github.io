@@ -293,3 +293,39 @@ footer {
         height: 120px;
     }
 }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+
+#labels {
+    grid-row: span 2 / span 2;
+}
+
+#values {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+}
+
+.skills-grid label, .skills-grid progress {
+    display: block;
+    margin-top: 5px;
+}
+
+.skills-grid progress {
+    margin-top: 7px;
+}
+
+.read {
+    border-radius: 26px;
+    padding: 15px;
+    text-align: center;
+    overflow-y: scroll;
+    box-shadow: inset 8px 8px 16px var(--shadow1),
+        inset -8px -8px 16px var(--shadow2);
+    cursor: default;
+    user-select: none;
+}

@@ -2,67 +2,59 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="../style-legacy.css">
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-  <script defer src="../script-legacy.js">
-    window.location = "#home";
-  </script>
-  <title>That time I broke magic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <script defer src="../script.js"></script>
+    <title>That time I broke magic | NevrenDev</title>
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="sidebar">
-      <div class="nav">
-        <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right" id="expand"></i></button>
-        <button onclick="changeSection('home')" class="sButton"><i class="fas fa-home"></i> <p>Home</p></button>
-        <button onclick="changeSection('chapters')" class="sButton"><i class="fa-solid fa-book-bookmark"></i> <p>Chapters</p></button>
-        <button onclick="changeSection('links')" class="sButton"><i class="fa-solid fa-link"></i> <p>Links</p></button>
-        <button onclick="goBack()" class="sButton"><i class="fa-solid fa-rotate-left"></i> <p>Return</p></button>
-      </div>
+    <div class="app">
+        <header>
+            <div class="logo">&gt; <strong>NevrenDev</strong></div>
+            <div class="nav">
+                <button onclick="go('../')">Home Page</button>
+                <button onclick="go('#intro')">About</button>
+                <button onclick="go('#chapter0')">Prolouge</button>
+                <button onclick="go('#chapter1')">Chapter 1</button>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button class="theme-toggle" id="themeToggle" onclick="theme()">Theme: Light</button>
+            </div>
+        </header>
+
+        <main class="h-scroll" id="hScroll">
+            <section class="section intro" id="intro">
+                <div class="panel">
+                    <div style="display:flex;gap:20px;align-items:center;">
+                        <div class="avatar" aria-hidden="true"></div>
+                        <div>
+                            <div class="title">> That time I broke magic</div>
+                            <p style="opacity:0.9;margin-top:8px;">Jump in with Akari to another world, where she puts her knowledge and passion for becoming a
+                            physicist and discoveres the great secret about magic.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section chapter" id="chapter0">
+                <div class="panel">
+                    <div class="read" id="ch0" onclick="selectChapter('prolouge')">
+                        Click to show the Chapter.
+                    </div>
+                </div>
+            </section>
+            <section class="section chapter" id="chapter1">
+                <div class="panel">
+                    <div class="read" id="ch1" onclick="selectChapter('chapter1')">
+                        WiP - Writing in Progress.
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="content">
-      <section id="home" class="section">
-        <h2><i class="fa-solid fa-book-open"></i> That time I broke magic</h2>
-        <hr>
-        <p>Jump in with Akari to another world, where she puts her knowledge and passion for becoming a physicist and discoveres the great secret about magic.</p>
-      </section>
-      <section id="chapters" class="section">
-        <h2><i class="fa-solid fa-book-bookmark"></i> Chapters</h2>
-        <hr>
-        <p>Here you can read new chapters, before they release on Wattpad</p>
-        <hr>
-        <section id="book">
-          <div id="list">
-            <button onclick="changeTheme()">Change theme</button>
-            <button onclick="selectChapter('prolouge')"><i class="fa-solid fa-0"></i> <p>Prolouge</p></button>
-            <button onclick="selectChapter('chapter1')"><i class="fa-solid fa-1"></i> <p>Chapter 1</p></button>
-          </div>
-          <div id="read" class="default">
-            <p align="center">Chapter not selected</p>
-          </div>
-        </section>
-      </section>
-      <section id="links" class="section">
-        <h2><i class="fa-solid fa-link"></i> Links</h2>
-        <hr>
-        <section id="smlinks">  
-        <fieldset>
-          <legend><img src="wattpad.png" alt="wattpad logo" width="16px" height="16px"> Wattpad</legend>
-          <p>Read and vote on wattpad so my story</p>
-          <a href="https://www.wattpad.com/story/390437614-that-time-i-broke-magic" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
-        </fieldset>
-        </section>
-      </section>
-    </div>
-    <div class="logo">
-      <img src="../logo.png" alt="logo" height="128px" width="128px">
-      <h2 id="loc">/home/</h2>
-    </div>
-    <div class="particles"></div>
-  </div>
-  <script src="chapterControl.js"></script>
+    <script src="chapterControl.js"></script>
 </body>
+
 </html>
