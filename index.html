@@ -1,118 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- index.html -->
+<!doctype html>
+<html lang="pl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <script defer src="script.js">
-    window.location = "#home";
-  </script>
-  <title>Nevren Dev Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Portfolio | NevrenDev</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="sidebar">
-      <div class="nav">
-        <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right" id="expand"></i></button>
-        <button onclick="changeSection('home')" class="sButton"><i class="fas fa-home"></i> <p>Home</p></button>
-        <button onclick="changeSection('about')" class="sButton"><i class="fas fa-user"></i> <p>About Me</p></button>
-        <button onclick="changeSection('projects')" class="sButton"><i class="fa-solid fa-diagram-project"></i> <p>Projects</p></button>
-        <button onclick="changeSection('updates')" class="sButton"><i class="fa-solid fa-arrow-rotate-left"></i> <p>Updates</p></button>
-        <button onclick="changeSection('links')" class="sButton"><i class="fa-solid fa-link"></i> <p>Links</p></button>
-      </div>
+    <div class="app">
+        <header>
+            <div class="logo">&gt; <strong>NevrenDev</strong></div>
+            <div class="nav">
+                <button onclick="go('#intro')">Home</button>
+                <button onclick="go('#about')">About me</button>
+                <button onclick="go('#projects')">Projects</button>
+                <button onclick="go('#skills')">Skills</button>
+                <button onclick="go('#socials')">Socials</button>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button class="theme-toggle" id="themeToggle" onclick="theme()">Theme: Light</button>
+            </div>
+        </header>
+
+        <main class="h-scroll" id="hScroll">
+            <section class="section intro" id="intro">
+                <div class="panel">
+                    <div style="display:flex;gap:20px;align-items:center;">
+                        <div class="avatar" aria-hidden="true">
+                            <img src="pfp.jpg" alt="profile picture">
+                        </div>
+                        <div>
+                            <div class="title">> hello, I'm NevrenDev()</div>
+                            <p style="opacity:0.9;margin-top:8px;">Programmer, graphic designer, artist and vtuber.</p>
+                            <p>Latest update: Massive overhaul part 1 - main page. Subpages (project pages) aren't ready yet, please don't go to them</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="panel">
+                    <h2>About me</h2>
+                    <p>I'm a student at Technical High School with a programming profile. <br> I mainly code in Python,
+                        but I'm able to code in HTML, CSS, JS and I'm learning C#, C++, and Java.
+                        <br> I also enjoy creating digital arts and sometimes graphic design. <br> In the free time I
+                        stream on Twitch or Discord as a VTuber.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section" id="projects">
+                <div class="panel">
+                    <h2>Projects</h2>
+                    <div class="projects-grid" id="projectsGrid">
+                        <button class="project-card" onclick="go('fml/')">
+                            <h3>FnF Mod Loader</h3>
+                            <p>Simple, lightweight mod manager for Friday Night Funkin</p>
+                        </button>
+                        <button class="project-card" onclick="go('fml2/')">
+                            <h3>FnF Mod Loader 2.0</h3>
+                            <p>More advanced and more customizable mod manager for Friday Night Funkin</p>
+                        </button>
+                        <button class="project-card" onclick="go('ttibm/')">
+                            <h3><q>That time I broke magic</q></h3>
+                            <p>My very own webnovel, it isn't finished, but in free time I try to write something</p>
+                        </button>
+                        <button class="project-card" onclick="go('qs/')">
+                            <h3>QuickScript</h3>
+                            <p>Multipurpose macro tool, that allows to do multiple things with just one terminal command line</p>
+                        </button>
+                        <button class="project-card" onclick="go('updates/')">
+                            <h3>Page Updates</h3>
+                            <p>Not entirerly a project, but it's worth to keep track of portfolio's updates</p>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="skills">
+                <div class="panel">
+                    <h2>Skills</h2>
+                    <label>
+                        HTML
+                        <progress max="100" value="70"></progress>
+                    </label><br>
+                    <label>
+                        CSS
+                        <progress max="100" value="50"></progress>
+                    </label><br>
+                    <label>
+                        JS
+                        <progress max="100" value="40"></progress>
+                    </label><br>
+                    <label>
+                        Java
+                        <progress max="100" value="10"></progress>
+                    </label><br>
+                    <label>
+                        C++
+                        <progress max="100" value="35"></progress>
+                    </label><br>
+                    <label>
+                        C#
+                        <progress max="100" value="20"></progress>
+                    </label><br>
+                    <label>
+                        Python
+                        <progress max="100" value="80"></progress>
+                    </label>
+                </div>
+            </section>
+
+            <section class="section" id="socials">
+                <div class="panel">
+                    <h2>Socials</h2>
+                    <button class="social-card" onclick="go('discord/')">
+                        <h3>Discord Server</h3>
+                        <p>Be in touch with development, schedule and news</p>
+                    </button>
+                    <button class="social-card" onclick="go('https:/\/x.com/NevrenDev')">
+                        <h3>Twitter/X</h3>
+                        <p>Quick information, art showcase, annoucements</p>
+                    </button>
+                    <button class="social-card" onclick="go('https:/\/youtube.com/@NevrenDev')">
+                        <h3>Youtube</h3>
+                        <p>Video content platform, sometimes VOD source</p>
+                    </button>
+                    <button class="social-card" onclick="go('https:/\/twitch.tv/nevrendevv')">
+                        <h3>Twitch</h3>
+                        <p>Streaming platform. If my internet works and I have free time, then I will be there</p>
+                    </button>
+                    <button class="social-card" onclick="go('https:/\/github.com/NevrenDev')">
+                        <h3>Github</h3>
+                        <p>Project's repo hosting, and also hosting for this portfolio</p>
+                    </button>
+                    <button class="social-card" onclick="go('https:/\/tiktok.com/@nevrendev')">
+                        <h3>TikTok</h3>
+                        <p>Funny clips from streams and short form videos</p>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer title="and ChatGPT*">
+            © 2025 NevrenDev • built with 🧋 and pain
+        </footer>
     </div>
-    <div class="content">
-      <section id="home" class="section">
-        <h2><i class="fas fa-home"></i> Welcome to Official Nevren Dev website</h2>
-        <hr>
-        <p>Feel free to explore the website <br>(I know that the website is kinda empty but I have
-        no idea what to put here)</p>
-        <br><br>
-        <p>Apparently I'm now a VTuber/PNGTuber so go check out in /link/ section</p>
-        <br><br>
-        <h3>Latest X/Twitter post</h3>
-        <a href="https://x.com/NevrenDev/status/1954494871068373431"><i class="fa-solid fa-link"></i> Posted on August 10, 2025</a>
-      </section>
-      <section id="about" class="section">
-        <h2><i class="fas fa-user"></i> About Me</h2>
-        <hr>
-        <p>I'm Nevren, a standalone game dev. I'm from Poland and I like coding tho I use no-code engine for games cuz
-          I don't have equipement and skills to code in engines like Unity or Unreal Engine.
-        </p>
-        <hr>
-        <fieldset id="skills"></fieldset>
-      </section>
-      <section id="projects" class="section">
-        <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
-        <hr>
-        <section id="gamesinfo">
-        </section>
-      </section>
-      <section id="updates" class="section">
-        <h2><i class="fa-solid fa-arrow-rotate-left"></i> Updates</h2>
-        <hr>
-        <p>Here will website updates. To see games updates visit their dedicated page in projects section</p>
-        <section id="wupdates"></section>
-      </section>
-      <section id="links" class="section">
-        <h2><i class="fa-solid fa-link"></i> Links</h2>
-        <hr>
-        <p>Here are some links to my social media and other</p>
-        <hr>
-        <section id="smlinks">
-          <fieldset>
-            <legend><i class="fa-brands fa-discord"></i> Discord Server</legend>
-            <p>Be in touch with the news from my development</p>
-            <p><a href="discord" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Join</a> (Working on it finally lol)</p>
-            <fieldset id="serverOffer">
-              <legend>What the server offers</legend>
-              <li>News about game development</li>
-              <li>sneakpeeks</li>
-              <li>active owner</li>
-              <li>More Soon</li>
-            </fieldset>
-          </fieldset>
-          <fieldset>
-            <legend><i class="fa-solid fa-message"></i> Discord DM Contact</legend>
-            <p>Nick: ._nevren_. <br>(You need to join the server in order to write to me in DMs)</p>
-          </fieldset>
-          <fieldset>
-            <legend><i class="fa-brands fa-x-twitter"></i> X/Twitter</legend>
-            <p>Annoucements, info, art showcase, basically my main source of communication with fans (except discord)</p>
-            <a href="https://x.com/NevrenDev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
-          </fieldset>
-          <fieldset>
-            <legend><i class="fa-brands fa-github"></i> Github</legend>
-            <p>There's nothing much there, and it's just host for this website</p>
-            <a href="https://github.com/NevrenDev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
-          </fieldset>
-          <fieldset>
-            <legend><i class="fa-brands fa-youtube"></i> YouTube</legend>
-            <p>Main content platform, for a long time only here will appear my video content</p>
-            <a href="https://youtube.com/@NevrenDev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
-          </fieldset>
-          <fieldset>
-            <legend><i class="fa-brands fa-tiktok"></i> TikTok</legend>
-            <p>Rarely maintaned, but I'll sometimes post clips from youtube videos/streams</p>
-            <a href="https://tiktok.com/@nevren.dev" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
-          </fieldset>
-          <fieldset>
-            <legend><i class="fa-brands fa-twitch"></i> Twitch</legend>
-            <p>My internet works like potato, there is no way I'll be able to stream any time soon, but follow if you want</p>
-            <a href="https://www.twitch.tv/nevrendevv" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Visit</a>
-          </fieldset>
-        </section>
-      </section>
-    </div>
-    <div class="logo">
-      <img src="logo.png" alt="logo" height="128px" width="128px">
-      <h2 id="loc">/home/</h2> <h2 id="cursor">_</h2>
-    </div>
-    <div class="particles"></div>
-  </div>
-  <script src="data.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
