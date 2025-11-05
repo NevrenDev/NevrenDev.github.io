@@ -1,279 +1,288 @@
 /* style.css — glassy / neumorphism inspired stylesheet */
 
 :root {
---bg-dark: #0b0c10;
---bg-light: #f0f0f0;
---text-dark: #cfd8dc;
---text-light: #1f2937;
---glass-blur: 10px;
---shadow1-dark: #141414;
---shadow2-dark: #2a2a2a;
---shadow1-light: #bebebe;
---shadow2-light: #ffffff;
+    --bg-dark: #0b0c10;
+    --bg-light: #f0f0f0;
+    --text-dark: #cfd8dc;
+    --text-light: #1f2937;
+    --glass-blur: 10px;
+    --shadow1-dark: #141414;
+    --shadow2-dark: #2a2a2a;
+    --shadow1-light: #bebebe;
+    --shadow2-light: #ffffff;
 }
 
 /* theme default = dark; toggle by adding data-theme="light" on html */
 html[data-theme="dark"] {
---bg: var(--bg-dark);
---text: var(--text-dark);
---shadow1: var(--shadow1-dark);
---shadow2: var(--shadow2-dark);
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+    --shadow1: var(--shadow1-dark);
+    --shadow2: var(--shadow2-dark);
 }
 
 html:not([data-theme="dark"]) {
---bg: var(--bg-light);
---text: var(--text-light);
---shadow1: var(--shadow1-light);
---shadow2: var(--shadow2-light);
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --shadow1: var(--shadow1-light);
+    --shadow2: var(--shadow2-light);
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 progress {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 200px;
-  height: 20px;
-  border-radius: 10px;
-  background: var(--bg);
-  border: 0;
-  margin: 5px;
-  overflow: hidden;
-  box-shadow: 8px 8px 16px var(--shadow1),
-              -8px -8px 16px var(--shadow2);
-  padding: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    background: var(--bg);
+    border: 0;
+    margin: 5px;
+    overflow: hidden;
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
+    padding: 5px;
 }
 
-progress::-moz-progress-bar, progress::-webkit-progress-value, progress::-webkit-progress-bar, progress::-webkit-progress-inner-element {
-  background: #750092;
-  border-radius: 9999px;
+progress::-moz-progress-bar,
+progress::-webkit-progress-value,
+progress::-webkit-progress-bar,
+progress::-webkit-progress-inner-element {
+    background: #750092;
+    border-radius: 9999px;
 }
 
-html, body {
-  height: 100vh;
-  width: 100%;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Fira Code', monospace;
-  background: var(--bg);
-  color: var(--text);
-  overflow-y: hidden;
-  overflow-x: scroll;
-  transition: all 1s ease-in-out;
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Fira Code', monospace;
+    background: var(--bg);
+    color: var(--text);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    transition: all 1s ease-in-out;
 }
 
 .app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 28px;
-  backdrop-filter: blur(var(--glass-blur));
-  background: transparent;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 28px;
+    backdrop-filter: blur(var(--glass-blur));
+    background: transparent;
 }
 
 .logo {
-  font-weight: 700;
-  color: var(--text);
-  font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1.2rem;
 }
 
 .theme-toggle {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 8px 12px;
-  border-radius: 10px;
-  cursor: pointer;
-  color: var(--text);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text);
 }
 
 /* horizontal scroll container */
 .h-scroll {
-  flex: 1;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .section {
-  min-width: 100vw;
-  height: calc(100vh - 72px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  scroll-snap-align: center;
-  padding: 48px;
+    min-width: 100vw;
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    padding: 48px;
 }
 
 /* glass panel */
 .panel {
-  background: var(--bg);
-  border-radius: 16px;
-  padding: 28px;
-  backdrop-filter: blur(var(--glass-blur));
-  box-shadow: 8px 8px 16px var(--shadow1),
-              -8px -8px 16px var(--shadow2);
-  min-width: 60%;
-  max-width: 1100px;
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
+    min-width: 60%;
+    max-width: 1100px;
 }
 
 /* intro */
 .intro {
-  display: flex;
-  gap: 24px;
-  align-items: center;
+    display: flex;
+    gap: 24px;
+    align-items: center;
 }
 
 .avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  flex: 0 0 160px;
-  box-shadow: 8px 8px 16px var(--shadow1),
-              -8px -8px 16px var(--shadow2);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    flex: 0 0 160px;
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
 }
 
 .avatar img {
-  width: 100%;
-  border-radius: 50%;
+    width: 100%;
+    border-radius: 50%;
 }
 
 .title {
-  font-size: 28px;
-  font-weight: 700;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 /* projects */
-.projects-grid, .socials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
+.projects-grid,
+.socials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
 }
 
 .social-card {
-  padding: 16px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  min-height: 120px;
-  box-shadow: 8px 8px 16px var(--shadow1),
-              -8px -8px 16px var(--shadow2);
-  max-width: 31%;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    min-height: 120px;
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
+    max-width: 31%;
+    margin: 10px;
 }
 
 .project-card {
-  padding: 16px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  min-height: 120px;
-  box-shadow: 8px 8px 16px var(--shadow1),
-              -8px -8px 16px var(--shadow2);
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    min-height: 120px;
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
 }
 
-.project-card:hover, .social-card:hover {
-  box-shadow: inset 8px 8px 16px var(--shadow1), 
-              inset -8px -8px 16px var(--shadow2);
+.project-card:hover,
+.social-card:hover {
+    box-shadow: inset 8px 8px 16px var(--shadow1),
+        inset -8px -8px 16px var(--shadow2);
 }
 
 /* skills */
 .skills-list {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
 }
 
 .skill-pill {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 button {
-  background: var(--bg);
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  color: var(--text);
-  cursor: pointer;
-  box-shadow: 8px 8px 16px var(--shadow1),
-              -8px -8px 16px var(--shadow2);
-  margin: 5px;
+    background: var(--bg);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
+    margin: 5px;
 }
 
 button:hover {
-  box-shadow: inset 8px 8px 16px var(--shadow1), 
-              inset -8px -8px 16px var(--shadow2);
+    box-shadow: inset 8px 8px 16px var(--shadow1),
+        inset -8px -8px 16px var(--shadow2);
 }
 
 /* footer */
 footer {
-  padding: 12px 24px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--text);
-  margin-top: -4vh;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text);
+    margin-top: -4vh;
 }
 
 /* subtle alternating backgrounds for sections */
 .section:nth-child(odd) {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
 }
 
 .section:nth-child(even) {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
 }
 
 /* scrollbar (thin, visible) */
 .h-scroll::-webkit-scrollbar {
-  height: 10px;
+    height: 10px;
 }
 
 .h-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, var(--accent), #9575DE);
-  border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), #9575DE);
+    border-radius: 999px;
 }
 
 .h-scroll::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 /* responsive: switch to vertical scrolling on small screens */
 @media (max-width: 800px) {
-  html, body {
-    overflow-y: scroll;
-  }
 
-  .h-scroll {
-    flex-direction: column;
-    overflow-x: visible;
-    overflow-y: auto;
-  }
+    html,
+    body {
+        overflow-y: scroll;
+    }
 
-  .section {
-    min-width: 100%;
-    height: auto;
-    padding: 28px;
-  }
+    .h-scroll {
+        flex-direction: column;
+        overflow-x: visible;
+        overflow-y: auto;
+    }
 
-  .panel {
-    width: 100%;
-  }
+    .section {
+        min-width: 100%;
+        height: auto;
+        padding: 28px;
+    }
 
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
+    .panel {
+        width: 100%;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
 }

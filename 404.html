@@ -11,14 +11,21 @@
     <title>404: Page not found</title>
   </head>
   <body>
-    <div class="wrapper">
-      <section id="home" class="section">
-        
-      <h2 style="color: white;"><i class="fa-solid fa-triangle-exclamation"></i> Page not found</h2>
-      <p style="color: white;">Sorry to say it to you, but this page does not exist please go back to <a href="https://nevrendev.github.io/">Home Page</a></p>
-      </section>
-      <img src="logo.png" alt="logo" height="128px" width="128px" id="logo">
-      <div class="particles"></div>
+    <div class="app">
+      <header>
+            <div class="logo">&gt; <strong>NevrenDev</strong></div>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button class="theme-toggle" id="themeToggle" onclick="theme()">Theme: Light</button>
+            </div>
+        </header>
+        <main class="h-scroll" id="hScroll">
+          <section class="section intro" id="intro">
+            <div class="panel">
+              <h1><i class="fa-regular fa-face-dizzy"></i> Page not found</h1>
+              <p>This page does not exist, please return to <a href="index.html" style="text-decoration: none;"><i class="fa-regular fa-hand-pointer"></i> Home Page</a></p>
+            </div>
+          </section>
+        </main>
     </div>
   </body>
 </html>
