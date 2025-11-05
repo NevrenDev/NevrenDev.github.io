@@ -6,61 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-    <title>FnfModLoader 2.0</title>
+    <title>FnfModLoader 2.0 | NevrenDev</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="sidebar">
+    <div class="app">
+        <header>
+            <div class="logo">&gt; <strong>NevrenDev</strong></div>
             <div class="nav">
-                <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right" id="expand"></i></button>
-                <button onclick="changeSection('home')" class="sButton"><i class="fas fa-home"></i> <p>Home</p></button>
-                <button onclick="changeSection('progress')" class="sButton"><i class="fa-solid fa-spinner"></i> <p>Progress</p></button>
-                <button onclick="goBack()" class="sButton"><i class="fa-solid fa-rotate-left"></i> <p>Return</p></button>
+                <button onclick="go('#intro')">About</button>
+                <button onclick="go('#progress')">Progress</button>
+                <button onclick="go('../')">Home Page</button>
             </div>
-        </div>
-        <div class="content">
-            <section id="home" class="section">
-                <h2><i class="fas fa-home"></i> FnfModLoader 2.0</h2>
-                <hr>
-                <p>FnfModLoader 2.0 is more advanced version of the original <a href="../fml/"><i class="fa-solid fa-link"></i> FnfModLoader</a>. <br>
-                    It has refreshed UI and more features which you can find in progress section or on project's repo <br>
-                    You can visit the repo here: <a href="https://github.com/NevrenDev/FnFModLoader2.0" target="_blank"><i class="fa-solid fa-link"></i> Github Repo</a>
-                </p>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button class="theme-toggle" id="themeToggle" onclick="theme()">Theme: Light</button>
+            </div>
+        </header>
+        <main class="h-scroll" id="hScroll">
+            <section class="section intro" id="intro">
+                <div class="panel">
+                    <div style="display:flex;gap:20px;align-items:center;">
+                        <div class="avatar icon" aria-hidden="true" style="background-image: url('icon.ico');"></div>
+                        <div>
+                            <div class="title">> FnF Mod Loader 2.0</div>
+                            <p style="opacity:0.9;margin-top:8px;">More advanced version of the original FnF Mod Loader. <br>
+                            It has refreshed UI and more features which you can find in progress section or on the repo. <br>
+                            You can go to the repo <button onclick="go('https:/\/github.com/NevrenDev/FnFModLoader2.0')">here</button></p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="progress" class="section">
-                <h2><i class="fa-solid fa-spinner"></i> Development Progress</h2>
-                <hr>
-                <fieldset id="updates">
-                    <legend>Progress</legend>
-                    <li>Uncomplete <br> <progress max="5" value="3"></progress> 60%</li>
-                    <li>Mod detection <br> <progress max="1" value="1"></progress> 100%</li>
-                    <li>Mod list <br> <progress max="10" value="9"></progress> 90%</li>
-                    <li>Settings <br> <progress max="10" value="5"></progress> 50%</li>
-                    <li>Themes <br> <progress max="2" value="1"></progress> 50%</li>
-                    <li>Mod Browser <br> <progress max="10" value="1"></progress> 10%</li>
-                    <li>New mods handler <br> <progress max="10" value="4"></progress> 40%</li>
-                </fieldset>
-                <hr>
-                <fieldset id="gamesinfo">
-                    <legend>Updates</legend>
-                    <fieldset>
-                        <legend>Ver 2.0.1-beta</legend>
+            <section class="section progress" id="progress">
+                <div class="panel">
+                    <h2>Progress and updates</h2>
+                    <hr>
+                    <h3>Progress</h3>
+                    <label>
+                        Paused Development
+                        <progress max="100" value="70"></progress>
+                    </label>
+                    <br><br>
+                    <h3>Updates</h3>
+                    <ul>
+                        V 2.0.1-beta
                         <li>Added favourite mod system. Favourited mod will appear on top of the list</li>
                         <li>Added version control for mod data, settings and language files <br>
                         (But deleting existing lines will still brake the program)</li>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Ver 2.0-beta</legend>
-                        <li>Official beta release. Most of functons are available but more will come</li>
-                    </fieldset>
-                </fieldset>
+                    </ul>
+                    <ul>
+                        V 2.0-beta
+                        <li>Official beta release. Most functions are available but more will come</li>
+                    </ul>
+                </div>
             </section>
-        </div>
-        <div class="logo">
-            <img src="../logo.png" alt="logo" height="128px" width="128px">
-            <h2 id="loc">/home/</h2>
-          </div>
-        <div class="particles"></div>
+        </main>
     </div>
     <script src="../script.js"></script>
 </body>

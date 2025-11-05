@@ -6,42 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-    <title>FnfModLoader</title>
+    <title>FnfModLoader | NevrenDev</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="sidebar">
+    <div class="app">
+        <header>
+            <div class="logo">&gt; <strong>NevrenDev</strong></div>
             <div class="nav">
-                <button onclick="toggleSidebar()" class="toggleSidebar"><i class="fa-solid fa-angles-right" id="expand"></i></button>
-                <button onclick="changeSection('home')" class="sButton"><i class="fas fa-home"></i> <p>Home</p></button>
-                <button onclick="changeSection('progress')" class="sButton"><i class="fa-solid fa-spinner"></i> <p>Progress</p></button>
-                <button onclick="goBack()" class="sButton"><i class="fa-solid fa-rotate-left"></i> <p>Return</p></button>
+                <button onclick="go('#intro')">About</button>
+                <button onclick="go('#progress')">Progress</button>
+                <button onclick="go('../')">Home Page</button>
             </div>
-        </div>
-        <div class="content">
-            <section id="home" class="section">
-                <h2><i class="fas fa-home"></i> FnfModLoader</h2>
-                <hr>
-                <p>FnfModLoader is my first open-source fully released program. <br>
-                    It doesn't feature much options and has been depracted in order to develop much more advanced 2.0 version. <br>
-                    You can visit the repo here: <a href="https://github.com/NevrenDev/FnFModLoader" target="_blank"><i class="fa-solid fa-link"></i> Github Repo</a>
-                </p>
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button class="theme-toggle" id="themeToggle" onclick="theme()">Theme: Light</button>
+            </div>
+        </header>
+        <main class="h-scroll" id="hScroll">
+            <section class="section intro" id="intro">
+                <div class="panel">
+                    <div style="display:flex;gap:20px;align-items:center;">
+                        <div class="avatar icon" aria-hidden="true" style="background-image: url('icon.ico');"></div>
+                        <div>
+                            <div class="title">> FnF Mod Loader</div>
+                            <p style="opacity:0.9;margin-top:8px;">My first open-source fully released program. <br>
+                            It doesn't feature much options and has been cancelled due to more advanced 2.0 version being made. <br>
+                            You can go to the repo <button onclick="go('https:/\/github.com/NevrenDev/FnFModLoader')">here</button></p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="progress" class="section">
-                <h2><i class="fa-solid fa-spinner"></i> Development Progress</h2>
-                <hr>
-                <fieldset id="updates">
-                    <legend>Progress</legend>
-                    <li>Depracted</li>
-                    <li>Completed <br> <progress max="5" value="4"></progress> 80%</li>
-                </fieldset>
+            <section class="section progress" id="progress">
+                <div class="panel">
+                    <h2>Progress and updates</h2>
+                    <hr>
+                    <h3>Progress</h3>
+                    <label>
+                        Cancelled
+                        <progress max="100" value="80"></progress>
+                    </label>
+                    <br><br>
+                    <h3>Updates</h3>
+                    <p>Untracked</p>
+                </div>
             </section>
-        </div>
-        <div class="logo">
-            <img src="../logo.png" alt="logo" height="128px" width="128px">
-            <h2 id="loc">/home/</h2>
-          </div>
-        <div class="particles"></div>
+        </main>
     </div>
     <script src="../script.js"></script>
 </body>
