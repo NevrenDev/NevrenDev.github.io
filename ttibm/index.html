@@ -13,9 +13,8 @@
 <body>
     <div class="app">
         <header>
-            <div class="logo">&gt; <strong>NevrenDev</strong></div>
+            <div class="logo">&gt; <strong>NevrenDev</strong><button onclick="go('../')" style="margin-left: 15px;">Home Page</button></div>
             <div class="nav">
-                <button onclick="go('../')">Home Page</button>
                 <button onclick="go('#intro')">About</button>
                 <button onclick="go('#chapter0')">Prolouge</button>
                 <button onclick="go('#chapter1')">Chapter 1</button>
@@ -28,7 +27,7 @@
         <main class="h-scroll" id="hScroll">
             <section class="section intro" id="intro">
                 <div class="panel">
-                    <div style="display:flex;gap:20px;align-items:center;">
+                    <div id="introBox">
                         <div class="avatar" aria-hidden="true">
                             <div class="icon"></div>
                         </div>
