@@ -142,17 +142,22 @@ header {
 .avatar {
     width: 160px;
     height: 160px;
-    background-size: 100%;
     border-radius: 50%;
+    padding: 15px;
     flex: 0 0 160px;
     box-shadow: 8px 8px 16px var(--shadow1),
         -8px -8px 16px var(--shadow2);
 }
 
 .icon {
-    background-size: 75%;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: inset 8px 8px 16px var(--shadow1),
+        inset -8px -8px 16px var(--shadow2);
 }
 
 .avatar img {
@@ -174,6 +179,10 @@ header {
     margin-top: 20px;
 }
 
+.socials-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
 .social-card {
     padding: 16px;
     border-radius: 12px;
@@ -181,7 +190,6 @@ header {
     min-height: 120px;
     box-shadow: 8px 8px 16px var(--shadow1),
         -8px -8px 16px var(--shadow2);
-    max-width: 31%;
     margin: 10px;
 }
 
@@ -291,6 +299,10 @@ footer {
     .avatar {
         width: 120px;
         height: 120px;
+    }
+
+    .nav {
+        display: none;
     }
 }
 
