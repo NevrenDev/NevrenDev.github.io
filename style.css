@@ -1,15 +1,20 @@
 /* style.css — glassy / neumorphism inspired stylesheet */
 
 :root {
-    --bg-dark: #0b0c10;
-    --bg-light: #f0f0f0;
+    --bg-dark: #0b0c1080;
+    --bg-light: #f0f0f080;
     --text-dark: #cfd8dc;
     --text-light: #1f2937;
-    --glass-blur: 10px;
-    --shadow1-dark: #141414;
-    --shadow2-dark: #2a2a2a;
-    --shadow1-light: #bebebe;
-    --shadow2-light: #ffffff;
+    --glass-blur: 3px;
+    --shadow1-dark: #14141480;
+    --shadow2-dark: #2a2a2a80;
+    --shadow1-light: #bebebe80;
+    --shadow2-light: #ffffff80;
+}
+
+@font-face {
+    font-family: manga;
+    src: url(font/mangat.ttf);
 }
 
 /* theme default = dark; toggle by adding data-theme="light" on html */
@@ -27,10 +32,36 @@ html:not([data-theme="dark"]) {
     --shadow2: var(--shadow2-light);
 }
 
+body:not([data-theme="dark"]) {
+    background: url(light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body[data-theme='dark'] {
+    background: url(dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all .5s ease-in-out;
+}
+
+footer {
+    background: var(--bg);
+    animation: slide 2s;
+    width: fit-content;
+    align-self: center;
+    backdrop-filter: blur(var(--glass-blur));
+    border-radius: 26px 26px 0 0px;
+    box-shadow: 8px 8px 16px var(--shadow1),
+        -8px -8px 16px var(--shadow2);
 }
 
 progress {
@@ -56,11 +87,38 @@ progress::-webkit-progress-inner-element {
     border-radius: 9999px;
 }
 
+@keyframes keep {
+    0% {
+        margin-top: 72px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        margin-bottom: -100vh;
+    }
+    100% {
+        margin-bottom: 0;
+    }
+}
+
 html,
 body {
     height: 100vh;
     width: 100%;
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Fira Code', monospace;
+    font-family: manga;
     background: var(--bg);
     color: var(--text);
     overflow-y: hidden;
@@ -77,10 +135,14 @@ header {
     height: 72px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly; 
+    align-self: center;
+    min-width: 70vw;
     padding: 12px 28px;
     backdrop-filter: blur(var(--glass-blur));
-    background: transparent;
+    background: var(--bg);
+    border-radius: 0 0 26px 26px;
+    animation: slide2 2s;
 }
 
 .logo {
@@ -105,6 +167,7 @@ header {
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    animation: keep 1s;
 }
 
 .section {
@@ -145,6 +208,19 @@ header {
     flex: 0 0 160px;
     box-shadow: 8px 8px 16px var(--shadow1),
         -8px -8px 16px var(--shadow2);
+}
+
+.avatar img {
+    animation: rot 5s ease-in-out reverse infinite;
+}
+
+@keyframes rot {
+    0% {
+        transform: 0;
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
 .icon {
@@ -225,7 +301,7 @@ button {
 }
 
 button:hover {
-    transform: translate(2px, 2px);
+    transform: scale(.9);
     box-shadow: inset 8px 8px 16px var(--shadow1),
         inset -8px -8px 16px var(--shadow2);
 }
@@ -318,6 +394,10 @@ footer {
 
 #labels {
     grid-row: span 2 / span 2;
+}
+
+#labels label {
+    margin-top: 8px;
 }
 
 #values {
